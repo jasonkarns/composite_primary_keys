@@ -1,3 +1,5 @@
+#TODO: handle foreign_keys as a hash so the keys don't need to be specified in the exact order
+# http://groups.google.com/group/compositekeys/browse_thread/thread/96a7fab1df0ef1d7/0f004e3ceaa34279?lnk=gst&q=hash+instead++array#0f004e3ceaa34279
 module ActiveRecord
   class CompositeKeyError < StandardError #:nodoc:
   end
