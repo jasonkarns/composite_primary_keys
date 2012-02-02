@@ -6,6 +6,11 @@ module ActiveRecord
         include CompositePrimaryKeys::ActiveRecord::FinderMethods
         include CompositePrimaryKeys::ActiveRecord::QueryMethods
 
+        # TODO: handle param 'values' as array of values or hash, not just single value
+        # https://github.com/rsim/oracle-enhanced/pull/132
+        #def insert(values)
+        #end
+
         def delete(id_or_array)
           ::ActiveRecord::IdentityMap.remove_by_id(self.symbolized_base_class, id_or_array) if ::ActiveRecord::IdentityMap.enabled?
           # CPK
